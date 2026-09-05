@@ -1,0 +1,710 @@
+/* ============================================================
+   REVENUERESCUE AI — RECOVERY FUNNEL
+   ============================================================ */
+
+.funnel-hero {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  min-height:155px;
+  padding:26px 29px;
+  border-radius:12px;
+  color:white;
+  background:linear-gradient(135deg,#16263d 0%,#1f4163 58%,#204f79 100%);
+  box-shadow:0 12px 28px rgba(28,47,74,.11);
+}
+
+.funnel-kicker {
+  color:#a6c7e6;
+  font-size:7px;
+  font-weight:850;
+  letter-spacing:1px;
+}
+
+.funnel-hero h1 {
+  margin:7px 0 0;
+  font-size:25px;
+  letter-spacing:-.6px;
+}
+
+.funnel-hero p {
+  max-width:620px;
+  margin:7px 0 0;
+  color:#b9cadc;
+  font-size:8px;
+  line-height:1.6;
+}
+
+.funnel-proof-tags {
+  display:flex;
+  align-items:center;
+  gap:5px;
+  margin-top:13px;
+}
+
+.funnel-proof-tags span {
+  padding:5px 7px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:4px;
+  background:rgba(255,255,255,.04);
+  color:#adc1d5;
+  font-size:5px;
+  font-weight:850;
+  letter-spacing:.5px;
+}
+
+.funnel-proof-tags b {
+  color:#68829d;
+  font-size:7px;
+}
+
+.funnel-hero-money {
+  min-width:185px;
+  padding:15px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:9px;
+  background:rgba(255,255,255,.055);
+}
+
+.funnel-hero-money span,
+.funnel-hero-money small {
+  display:block;
+  color:#9db4ca;
+  font-size:6px;
+  font-weight:800;
+}
+
+.funnel-hero-money strong {
+  display:block;
+  margin-top:4px;
+  color:#69dcaf;
+  font-size:24px;
+}
+
+.funnel-stage-panel {
+  margin-top:14px;
+  padding:17px 18px 18px;
+}
+
+.funnel-panel-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:15px;
+}
+
+.funnel-panel-head span:first-child {
+  display:block;
+  color:#8e97a4;
+  font-size:6px;
+  font-weight:850;
+  letter-spacing:.8px;
+}
+
+.funnel-panel-head h2 {
+  margin:4px 0 0;
+  color:#344056;
+  font-size:13px;
+}
+
+.funnel-live {
+  padding:5px 7px;
+  border-radius:4px;
+  color:#168a60;
+  background:#eaf8f1;
+  font-size:5px;
+  font-weight:850;
+}
+
+.funnel-stages {
+  display:flex;
+  align-items:stretch;
+  gap:7px;
+  margin-top:18px;
+}
+
+.funnel-stage {
+  position:relative;
+  min-width:0;
+  flex:1;
+  padding:11px;
+  border:1px solid #e1e6ed;
+  border-radius:8px;
+  background:#fbfcfe;
+}
+
+.funnel-stage::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:8px;
+  pointer-events:none;
+  opacity:.05;
+  background:currentColor;
+}
+
+.funnel-stage.blue {color:#287ee6;}
+.funnel-stage.indigo {color:#4b79bd;}
+.funnel-stage.purple {color:#7659b8;}
+.funnel-stage.orange {color:#c17e1e;}
+.funnel-stage.green {color:#168a60;}
+
+.funnel-stage-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.funnel-stage-top span {
+  color:#9aa2ae;
+  font-family:ui-monospace,monospace;
+  font-size:6px;
+  font-weight:850;
+}
+
+.funnel-stage-top i {
+  width:17px;
+  height:17px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:currentColor;
+  color:white;
+  font-size:6px;
+  font-style:normal;
+}
+
+.funnel-stage strong {
+  display:block;
+  margin-top:10px;
+  color:#3b465a;
+  font-size:15px;
+  letter-spacing:-.3px;
+}
+
+.funnel-stage b {
+  display:block;
+  margin-top:3px;
+  color:#5d687c;
+  font-size:7px;
+}
+
+.funnel-stage small {
+  display:block;
+  min-height:22px;
+  margin-top:3px;
+  color:#9aa2ae;
+  font-size:6px;
+  line-height:1.4;
+}
+
+.funnel-stage-bar {
+  height:5px;
+  overflow:hidden;
+  margin-top:10px;
+  border-radius:99px;
+  background:#e8ecf1;
+}
+
+.funnel-stage-bar i {
+  display:block;
+  height:100%;
+  border-radius:inherit;
+  background:currentColor;
+  opacity:.8;
+}
+
+.funnel-arrow {
+  align-self:center;
+  flex:0 0 auto;
+  color:#c2c9d1;
+  font-size:12px;
+}
+
+.funnel-kpi-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:11px;
+  margin-top:12px;
+}
+
+.funnel-kpi {
+  position:relative;
+  padding:13px 14px 14px 16px;
+}
+
+.funnel-kpi-icon {
+  display:block;
+  width:5px;
+  height:27px;
+  position:absolute;
+  left:0;
+  top:14px;
+  border-radius:0 4px 4px 0;
+  background:#287ee6;
+}
+
+.funnel-kpi-icon.green {background:#18a873;}
+.funnel-kpi-icon.purple {background:#8062cc;}
+.funnel-kpi-icon.orange {background:#e1a333;}
+.funnel-kpi > span {
+  color:#929aa7;
+  font-size:6px;
+  font-weight:800;
+}
+
+.funnel-kpi > strong {
+  display:block;
+  margin-top:5px;
+  color:#354056;
+  font-size:17px;
+}
+
+.funnel-kpi > small {
+  display:block;
+  margin-top:3px;
+  color:#9aa2ae;
+  font-size:6px;
+}
+
+.funnel-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:13px;
+  margin-top:13px;
+}
+
+.funnel-card {
+  overflow:hidden;
+}
+
+.funnel-card-head {
+  padding:13px 15px;
+  border-bottom:1px solid #edf0f4;
+}
+
+.funnel-card-head span {
+  display:block;
+  color:#566277;
+  font-size:8px;
+  font-weight:750;
+}
+
+.funnel-card-head h3 {
+  margin:3px 0 0;
+  color:#929aa7;
+  font-size:6px;
+  font-weight:400;
+}
+
+.economics {
+  padding:19px 17px 14px;
+}
+
+.economics-bar {
+  height:26px;
+  overflow:hidden;
+  border-radius:6px;
+  background:#edf0f3;
+}
+
+.economics-recovered {
+  height:100%;
+  min-width:0;
+  background:linear-gradient(90deg,#2fb98a,#168a60);
+}
+
+.economics-labels {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:9px;
+}
+
+.economics-labels span,
+.economics-labels strong {
+  display:block;
+}
+
+.economics-labels span {
+  color:#9aa2ae;
+  font-size:5px;
+  font-weight:850;
+  letter-spacing:.5px;
+}
+
+.economics-labels strong {
+  margin-top:3px;
+  color:#47536a;
+  font-size:10px;
+}
+
+.economics-right {
+  text-align:right;
+}
+
+.economics-right strong {
+  color:#168a60;
+}
+
+.economics-bottom {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  margin:0 15px 14px;
+  border-top:1px solid #edf0f4;
+}
+
+.economics-bottom > div {
+  padding:10px 8px 0;
+}
+
+.economics-bottom > div + div {
+  border-left:1px solid #edf0f4;
+}
+
+.economics-bottom span {
+  display:block;
+  color:#9aa2ae;
+  font-size:6px;
+}
+
+.economics-bottom strong {
+  display:block;
+  margin-top:3px;
+  color:#3d4960;
+  font-size:11px;
+}
+
+.outcome-control {
+  padding:14px 16px;
+}
+
+.outcome-control-row {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 28px 35px;
+  align-items:center;
+  gap:8px;
+  padding:7px 0;
+  border-bottom:1px solid #f0f2f5;
+}
+
+.outcome-control-row:last-child {
+  border-bottom:0;
+}
+
+.outcome-control-row > div:first-child {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.outcome-control-row span {
+  color:#68748a;
+  font-size:7px;
+}
+
+.outcome-control-row strong {
+  text-align:right;
+  color:#435067;
+  font-size:8px;
+}
+
+.outcome-control-row small {
+  text-align:right;
+  color:#9ca4af;
+  font-size:6px;
+}
+
+.outcome-mini-track {
+  grid-column:1 / -1;
+  height:4px;
+  margin-top:-3px;
+  overflow:hidden;
+  border-radius:99px;
+  background:#edf0f3;
+}
+
+.outcome-mini-track i {
+  display:block;
+  height:100%;
+  border-radius:inherit;
+}
+
+.outcome-mini-track i.green {background:#18a873;}
+.outcome-mini-track i.amber {background:#e4a72d;}
+.outcome-mini-track i.purple {background:#8062cc;}
+.outcome-mini-track i.slate {background:#7b8799;}
+.outcome-mini-track i.red {background:#dc5c5c;}
+
+.funnel-dot {
+  width:6px;
+  height:6px;
+  flex:0 0 auto;
+  display:inline-block;
+  border-radius:50%;
+}
+.funnel-dot.green {background:#18a873;}
+.funnel-dot.amber {background:#e4a72d;}
+.funnel-dot.purple {background:#8062cc;}
+.funnel-dot.slate {background:#7b8799;}
+.funnel-dot.red {background:#dc5c5c;}
+
+.routing-list {
+  padding:15px 16px;
+}
+
+.routing-row {
+  margin-bottom:14px;
+}
+
+.routing-row:last-child {
+  margin-bottom:0;
+}
+
+.routing-name {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.routing-name strong {
+  color:#58647a;
+  font-size:7px;
+}
+
+.routing-name span {
+  color:#9ca4af;
+  font-size:6px;
+}
+
+.routing-value {
+  margin-top:4px;
+  color:#168a60;
+  font-size:8px;
+  font-weight:800;
+}
+
+.routing-track {
+  height:6px;
+  margin-top:5px;
+  overflow:hidden;
+  border-radius:99px;
+  background:#edf0f3;
+}
+
+.routing-track i {
+  display:block;
+  height:100%;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#5c9de7,#2c79cf);
+}
+
+.control-visual {
+  padding:14px 16px 7px;
+}
+
+.control-line {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 0;
+  border-bottom:1px solid #f0f2f5;
+}
+
+.control-line > div {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.control-line span {
+  color:#69758a;
+  font-size:7px;
+}
+
+.control-line strong {
+  color:#445168;
+  font-size:9px;
+}
+
+.guardrail-note {
+  display:flex;
+  gap:8px;
+  margin:4px 16px 15px;
+  padding:9px;
+  border:1px solid #dcebe4;
+  border-radius:6px;
+  background:#f5fbf8;
+}
+
+.guardrail-note > span {
+  width:18px;
+  height:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  border-radius:50%;
+  background:#ddf3e8;
+  color:#168a60;
+  font-size:7px;
+  font-weight:850;
+}
+
+.guardrail-note p {
+  margin:0;
+  color:#7c9588;
+  font-size:6px;
+  line-height:1.5;
+}
+
+.funnel-demo-story {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin-top:13px;
+  padding:17px 18px;
+}
+
+.funnel-demo-story > div:first-child {
+  max-width:480px;
+}
+
+.funnel-demo-story > div:first-child > span {
+  color:#287ee6;
+  font-size:6px;
+  font-weight:850;
+  letter-spacing:.7px;
+}
+
+.funnel-demo-story h2 {
+  margin:4px 0 0;
+  color:#344056;
+  font-size:13px;
+}
+
+.funnel-demo-story p {
+  margin:4px 0 0;
+  color:#929aa7;
+  font-size:7px;
+  line-height:1.55;
+}
+
+.story-flow {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.story-flow > b {
+  color:#c2c9d1;
+  font-size:10px;
+}
+
+.story-node {
+  min-width:62px;
+  padding:8px 7px;
+  border:1px solid #e4e8ed;
+  border-radius:6px;
+  background:#fafbfd;
+  text-align:center;
+}
+
+.story-node span,
+.story-node strong {
+  display:block;
+}
+
+.story-node span {
+  color:#9aa2ae;
+  font-size:5px;
+  font-weight:850;
+}
+
+.story-node strong {
+  margin-top:3px;
+  color:#4b576c;
+  font-size:9px;
+}
+
+.story-node.success {
+  border-color:#cbe7da;
+  background:#f1faf6;
+}
+
+.story-node.success strong {
+  color:#168a60;
+}
+
+.funnel-empty {
+  min-height:150px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.funnel-empty span {
+  color:#9ca4af;
+  font-size:17px;
+}
+
+.funnel-empty p {
+  max-width:240px;
+  color:#9aa2ae;
+  font-size:7px;
+}
+
+@media (max-width:1000px) {
+  .funnel-stages {
+    flex-wrap:wrap;
+  }
+  .funnel-stage {
+    flex-basis:28%;
+  }
+  .funnel-arrow {
+    display:none;
+  }
+  .funnel-kpi-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:760px) {
+  .funnel-hero {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .funnel-hero-money {
+    width:100%;
+  }
+  .funnel-grid {
+    grid-template-columns:1fr;
+  }
+  .funnel-stage {
+    flex-basis:45%;
+  }
+  .funnel-demo-story {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .story-flow {
+    flex-wrap:wrap;
+  }
+}
+
+@media (max-width:520px) {
+  .funnel-kpi-grid {
+    grid-template-columns:1fr;
+  }
+  .funnel-stage {
+    flex-basis:100%;
+  }
+  .funnel-proof-tags {
+    flex-wrap:wrap;
+  }
+}

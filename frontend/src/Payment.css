@@ -1,0 +1,471 @@
+/* ============================================================
+   RAZORPAY PAYMENT EXECUTION
+   ============================================================ */
+
+.razorpay-page {
+  width: 100%;
+  animation: rzpFadeIn 0.35s ease;
+}
+
+@keyframes rzpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.rzp-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.rzp-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin-bottom: 9px;
+  opacity: 0.65;
+}
+
+.rzp-page-header h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.rzp-page-header p {
+  margin: 10px 0 0;
+  max-width: 680px;
+  opacity: 0.62;
+  line-height: 1.6;
+}
+
+.rzp-header-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.rzp-test-badge,
+.rzp-connected-badge {
+  padding: 9px 13px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.rzp-test-badge {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.05);
+}
+
+.rzp-connected-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(0,190,140,0.25);
+  background: rgba(0,190,140,0.08);
+}
+
+.rzp-connected-badge i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #20c997;
+}
+
+
+/* ============================================================
+   MAIN PAYMENT CARD
+   ============================================================ */
+
+.rzp-payment-card {
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.055),
+      rgba(255,255,255,0.025)
+    );
+  box-shadow: 0 20px 60px rgba(0,0,0,0.16);
+}
+
+.rzp-payment-top {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 28px;
+}
+
+.rzp-logo-box {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  font-size: 22px;
+  font-weight: 900;
+  background: rgba(82,112,255,0.15);
+  border: 1px solid rgba(82,112,255,0.25);
+}
+
+.rzp-card-kicker,
+.rzp-section-heading span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  opacity: 0.55;
+}
+
+.rzp-payment-top h2 {
+  margin: 5px 0 4px;
+  font-size: 22px;
+}
+
+.rzp-payment-top p {
+  margin: 0;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   PAYMENT LINK
+   ============================================================ */
+
+.rzp-link-box {
+  padding: 18px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.rzp-link-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.rzp-link-label span:first-child {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  opacity: 0.5;
+}
+
+.rzp-ready {
+  color: #20c997;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.rzp-link-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rzp-link-content code {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.045);
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.rzp-open-button {
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 17px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  background: #ffffff;
+  color: #111111;
+}
+
+.rzp-open-button span {
+  margin-left: 6px;
+}
+
+.rzp-open-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   DETAILS
+   ============================================================ */
+
+.rzp-details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.rzp-detail {
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.055);
+}
+
+.rzp-detail span {
+  display: block;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
+  margin-bottom: 7px;
+}
+
+.rzp-detail strong {
+  font-size: 13px;
+  word-break: break-word;
+}
+
+
+/* ============================================================
+   PRIMARY ACTION
+   ============================================================ */
+
+.rzp-primary-action {
+  margin-top: 18px;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 14px;
+  background: rgba(82,112,255,0.08);
+  border: 1px solid rgba(82,112,255,0.18);
+}
+
+.rzp-action-title {
+  display: block;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.rzp-primary-action p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.rzp-main-button {
+  border: 0;
+  border-radius: 11px;
+  padding: 14px 20px;
+  font-weight: 900;
+  cursor: pointer;
+  white-space: nowrap;
+  background: #ffffff;
+  color: #111111;
+}
+
+.rzp-main-button span {
+  margin-left: 7px;
+}
+
+.rzp-main-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   EXECUTION FLOW
+   ============================================================ */
+
+.rzp-execution-section {
+  margin-top: 28px;
+}
+
+.rzp-section-heading {
+  margin-bottom: 15px;
+}
+
+.rzp-section-heading h2 {
+  margin: 6px 0 0;
+  font-size: 20px;
+}
+
+.rzp-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.rzp-flow-step {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 15px;
+  border-radius: 13px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.025);
+}
+
+.rzp-flow-step.complete {
+  border-color: rgba(32,201,151,0.18);
+}
+
+.rzp-flow-step.active {
+  border-color: rgba(82,112,255,0.28);
+  background: rgba(82,112,255,0.07);
+}
+
+.rzp-step-number {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 900;
+  background: rgba(255,255,255,0.07);
+}
+
+.rzp-flow-step.complete .rzp-step-number {
+  background: rgba(32,201,151,0.12);
+  color: #20c997;
+}
+
+.rzp-flow-step strong {
+  display: block;
+  font-size: 12px;
+}
+
+.rzp-flow-step p {
+  margin: 4px 0 0;
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.rzp-flow-line {
+  width: 20px;
+  height: 1px;
+  align-self: center;
+  background: rgba(255,255,255,0.12);
+}
+
+
+/* ============================================================
+   TEST NOTE
+   ============================================================ */
+
+.rzp-test-note {
+  margin-top: 20px;
+  display: flex;
+  gap: 13px;
+  padding: 17px;
+  border-radius: 13px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.025);
+}
+
+.rzp-note-icon {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.rzp-test-note strong {
+  font-size: 12px;
+}
+
+.rzp-test-note p {
+  margin: 4px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  opacity: 0.55;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .rzp-page-header {
+    flex-direction: column;
+  }
+
+  .rzp-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rzp-flow {
+    flex-direction: column;
+  }
+
+  .rzp-flow-line {
+    width: 1px;
+    height: 15px;
+    align-self: flex-start;
+    margin-left: 30px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .rzp-payment-card {
+    padding: 20px;
+  }
+
+  .rzp-link-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rzp-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rzp-primary-action {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rzp-main-button {
+    width: 100%;
+  }
+
+}

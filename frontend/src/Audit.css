@@ -1,0 +1,376 @@
+/* ============================================================
+   REVENUERESCUE AI — AUDIT TRAIL
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   PAGE HEADER
+   ------------------------------------------------------------ */
+
+.audit-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 0 18px;
+}
+
+.audit-page-header > div:first-child > span {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  color: #8d96a5;
+}
+
+.audit-page-header h1 {
+  margin: 5px 0;
+  color: #29364d;
+  font-size: 25px;
+}
+
+.audit-page-header p {
+  margin: 5px 0;
+  color: #8c97a8;
+  font-size: 12px;
+}
+
+
+/* ------------------------------------------------------------
+   HEADER STATISTICS
+   ------------------------------------------------------------ */
+
+.audit-header-stats {
+  display: flex;
+  gap: 9px;
+}
+
+.audit-header-stats div {
+  min-width: 90px;
+  padding: 10px 12px;
+
+  border: 1px solid #e2e7ed;
+  border-radius: 7px;
+
+  background: #ffffff;
+}
+
+.audit-header-stats span,
+.audit-header-stats strong {
+  display: block;
+}
+
+.audit-header-stats span {
+  color: #929aa7;
+  font-size: 6px;
+  font-weight: 850;
+}
+
+.audit-header-stats strong {
+  margin-top: 4px;
+  color: #445168;
+  font-size: 10px;
+}
+
+
+/* ------------------------------------------------------------
+   AUDIT CONTROLS
+   ------------------------------------------------------------ */
+
+.audit-controls {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.55fr;
+
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 15px;
+  margin-bottom: 13px;
+}
+
+.audit-controls span {
+  display: block;
+
+  color: #929aa7;
+  font-size: 6px;
+  font-weight: 850;
+}
+
+.audit-controls strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #566277;
+  font-size: 8px;
+}
+
+.audit-controls input,
+.audit-controls select {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 9px;
+
+  border: 1px solid #e0e6ec;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #59657a;
+  font-size: 8px;
+
+  outline: none;
+}
+
+
+/* ------------------------------------------------------------
+   AUDIT TABLE CARD
+   ------------------------------------------------------------ */
+
+.audit-table-card {
+  overflow: hidden;
+}
+
+
+/* ------------------------------------------------------------
+   TABLE HEADER
+   ------------------------------------------------------------ */
+
+.audit-table-head {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 14px 15px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.audit-table-head span:first-child {
+  color: #929aa7;
+  font-size: 6px;
+  font-weight: 850;
+}
+
+.audit-table-head h2 {
+  margin: 4px 0;
+
+  color: #3f4b61;
+  font-size: 12px;
+}
+
+
+/* ------------------------------------------------------------
+   LIVE AUDIT BADGE
+   ------------------------------------------------------------ */
+
+.audit-live {
+  padding: 5px 7px;
+
+  border-radius: 4px;
+
+  background: #eaf8f1;
+
+  color: #168a60;
+
+  font-size: 5px;
+  font-weight: 850;
+}
+
+
+/* ------------------------------------------------------------
+   TABLE SCROLL CONTAINER
+   ------------------------------------------------------------ */
+
+.audit-table-scroll {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+/* ------------------------------------------------------------
+   AUDIT TABLE
+   ------------------------------------------------------------ */
+
+.audit-table-scroll table {
+  width: 100%;
+  min-width: 1050px;
+
+  border-collapse: collapse;
+}
+
+
+/* ------------------------------------------------------------
+   TABLE HEADER CELLS
+   ------------------------------------------------------------ */
+
+.audit-table-scroll th {
+  padding: 10px 12px;
+
+  text-align: left;
+
+  background: #fafbfc;
+
+  color: #8c95a3;
+
+  font-size: 6px;
+  font-weight: 850;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* ------------------------------------------------------------
+   TABLE DATA CELLS
+   ------------------------------------------------------------ */
+
+.audit-table-scroll td {
+  padding: 11px 12px;
+
+  border-top: 1px solid #f0f2f5;
+
+  color: #566277;
+
+  font-size: 7px;
+
+  white-space: nowrap;
+}
+
+
+/* ------------------------------------------------------------
+   STATUS BADGES
+   ------------------------------------------------------------ */
+
+.audit-status {
+  display: inline-block;
+
+  padding: 4px 6px;
+
+  border-radius: 4px;
+
+  font-size: 5px;
+  font-weight: 850;
+
+  text-transform: capitalize;
+}
+
+
+/* Recovered */
+
+.audit-status.recovered {
+  background: #eaf8f1;
+
+  color: #168a60;
+}
+
+
+/* Pending */
+
+.audit-status.pending {
+  background: #fff5dd;
+
+  color: #9c761e;
+}
+
+
+/* Failed */
+
+.audit-status.failed {
+  background: #fff0f0;
+
+  color: #b95353;
+}
+
+
+/* Escalated */
+
+.audit-status.escalated {
+  background: #f1ecfb;
+
+  color: #7659b8;
+}
+
+
+/* Stopped */
+
+.audit-status.stopped {
+  background: #eef1f4;
+
+  color: #68778b;
+}
+
+
+/* ------------------------------------------------------------
+   RECOVERED AMOUNT
+   ------------------------------------------------------------ */
+
+.audit-green {
+  color: #168a60 !important;
+
+  font-weight: 800;
+}
+
+
+/* ------------------------------------------------------------
+   EMPTY STATE
+   ------------------------------------------------------------ */
+
+.audit-empty {
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.audit-empty div {
+  font-size: 24px;
+
+  color: #a1a9b3;
+}
+
+.audit-empty strong {
+  margin-top: 8px;
+
+  color: #59657a;
+
+  font-size: 9px;
+}
+
+.audit-empty p {
+  margin: 4px;
+
+  color: #9aa2ae;
+
+  font-size: 7px;
+}
+
+
+/* ------------------------------------------------------------
+   RESPONSIVE DESIGN
+   ------------------------------------------------------------ */
+
+@media (max-width: 750px) {
+
+  .audit-page-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .audit-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-header-stats {
+    width: 100%;
+  }
+
+}
