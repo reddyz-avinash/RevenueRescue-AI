@@ -75,7 +75,7 @@ Recovered Revenue
       |
       v
 Audit Trail + Analytics
-Key Features
+
 1. Revenue Risk Detection
 
 The system identifies transactions that may result in lost revenue.
