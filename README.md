@@ -13,9 +13,8 @@ Recovery.
 
 🎯 Problem Statement
 
-Payment failures can directly result in lost revenue.
-
-However, not every failed payment should be treated in the same way.
+Payment failures can directly result in lost revenue. However, not every
+failed payment should be treated in the same way.
 
 A business needs to understand:
 
@@ -68,15 +67,11 @@ Human Review     Automated
                       ↓
              Analytics & Funnel
 
-Core Principle
-
 The AI makes the recovery decision, Razorpay executes the payment
 action, and verification confirms whether money was actually
 recovered.
 
 🤖 AI Decision Flow
-
-The core of RevenueRescue AI is the recovery decision process.
 
 Transaction
      │
@@ -124,60 +119,72 @@ Confidence
 
 Recovery eligibility
 
-The AI recommendation acts as a decision-support mechanism rather
-than an uncontrolled automatic action.
+🖥️ Application Screenshots
 
 🏠 Revenue Recovery Command Center
 
-The Overview dashboard provides a high-level view of the revenue
-recovery system.
-
-It helps users understand:
-
-Revenue at risk
-
-Transaction activity
-
-Recovery performance
-
-Recovery outcomes
-
-Important recovery metrics
-
-Dashboard
+The Overview dashboard provides a high-level view of revenue at risk,
+transaction activity, recovery performance, and recovery outcomes.
 
 
 
 🧠 AI Recovery
 
-The AI Recovery module is the main decision-making interface.
+The AI Recovery module evaluates a transaction, estimates recovery
+probability, diagnoses the failure, and recommends a recovery action.
 
-It provides visibility into:
 
-Transaction details
 
-Recovery probability
+🛡️ Guardrails
 
-Failure diagnosis
+The Guardrails layer keeps AI-driven recovery actions within defined
+boundaries and can route cases to Human Review when required.
 
-Recommended recovery strategy
 
-Recovery decision
 
-Confidence
+👤 Human Review
 
-Guardrail considerations
+Cases that require additional judgement can be reviewed before recovery
+execution.
 
-AI Recovery
+
+
+💳 Razorpay Execution
+
+Recovery actions can be executed using Razorpay Test Mode Payment Links.
+
+
+
+✅ Payment Verification
+
+The system verifies the Razorpay payment result before counting revenue
+as recovered.
+
+
+
+📋 Audit Trail
+
+Recovery attempts and their outcomes are recorded for traceability.
+
+
+
+📊 Recovery Funnel
+
+The funnel shows the journey from revenue exposure through verified
+recovery.
+
+
+
+📈 Recovery Analytics
+
+Analytics provides a business and model-level view of recovery
+performance, outcomes, failure reasons, strategies, and metrics.
 
 
 
 🛡️ Guardrails
 
 AI-powered recovery should not operate without boundaries.
-
-RevenueRescue AI includes a Guardrails layer between the AI decision and
-recovery execution.
 
              AI Recommendation
                     │
@@ -193,8 +200,6 @@ recovery execution.
           │                     │
           ▼                     ▼
       Recovery             Human Review
-
-The Guardrails layer is designed around:
 
 Recovery eligibility
 
@@ -213,18 +218,11 @@ Recovery stopping conditions
 The AI can make a decision, but it still has to stay inside the
 rules.
 
-Guardrails
-
-
-
 👤 Human Review
 
-Not every recovery case should be handled automatically.
-
-The Human Review module provides a controlled workflow for cases where
-additional judgement is required.
-
-Possible outcomes include:
+Not every recovery case should be handled automatically. Human Review
+provides a controlled workflow for cases where additional judgement is
+required.
 
 Approve
 
@@ -234,35 +232,13 @@ Escalate
 
 Reject
 
-AI Decision
-    │
-    ▼
-Guardrails
-    │
-    ├── Suitable → Automated Recovery
-    │
-    └── Requires Review
-              │
-              ▼
-        Human Review
-              │
-       ┌──────┼──────┐
-       ▼      ▼      ▼
-    Approve  Hold  Escalate
-
 AI handles suitable cases while humans focus on cases where
 judgement is actually useful.
 
-Human Review
-
-
-
 💳 Razorpay Integration
 
-RevenueRescue AI integrates with Razorpay Test Mode to demonstrate
-the payment recovery process.
-
-The project uses Razorpay Payment Links as the recovery mechanism.
+RevenueRescue AI integrates with Razorpay Test Mode and uses
+Razorpay Payment Links as the recovery mechanism.
 
 AI Recovery Decision
         ↓
@@ -278,17 +254,9 @@ Payment Status
         ↓
 RevenueRescue Verification
 
-The project uses Test Mode for demonstration purposes and does not
-require real customer payments.
-
-Razorpay Execution
-
-
+No real customer payment is required for the demonstration.
 
 🔄 Recovery Execution
-
-Once an appropriate recovery action has been selected and passes the
-required guardrails, the recovery action can be executed.
 
 Transaction
      ↓
@@ -302,20 +270,13 @@ Razorpay Payment Link
      ↓
 Customer Payment Attempt
 
-The system then moves to the verification stage.
-
 ✅ Payment Verification
 
 A recovery action being triggered does not automatically mean
 revenue was recovered.
 
-RevenueRescue AI therefore includes a separate payment verification
-stage.
-
 The system checks Razorpay payment information and determines whether
 the payment was actually completed.
-
-Possible recovery states include:
 
 Recovered
 
@@ -357,67 +318,18 @@ Not Recovered / Pending
      ↓
 Recovered Amount = ₹0
 
-This prevents the system from reporting recovered revenue simply because
-a payment link was created.
-
-Payment Verification
-
-
+Recovery Link Created ≠ Revenue Recovered
 
 📋 Audit Trail
 
-Every recovery attempt should be traceable.
-
-RevenueRescue AI records recovery outcomes in the Audit Trail.
-
-The audit information can include:
-
-Transaction
-
-Recovery action
-
-Payment Link
-
-Verification result
-
-Amount
-
-Amount recovered
-
-Status
-
-Recovery outcome
+Every recovery attempt should be traceable. The Audit Trail can record
+the transaction, recovery action, Payment Link, verification result,
+amount, amount recovered, status, and outcome.
 
 Both successful and unsuccessful/incomplete recovery attempts can be
 recorded.
 
-Recovery Attempt
-       │
-       ▼
-Payment Result
-       │
-       ├── Successful
-       │       ↓
-       │   Recovered
-       │       ↓
-       │   Audit Record
-       │
-       └── Unsuccessful / Incomplete
-               ↓
-           Not Recovered
-               ↓
-           Audit Record
-
-This provides traceability across the recovery lifecycle.
-
-Audit Trail
-
-
-
 📊 Recovery Funnel
-
-The Recovery Funnel shows the complete journey of revenue through the
-recovery system.
 
 Revenue Exposure
        ↓
@@ -433,19 +345,7 @@ Payment Attempts
        ↓
 Verified Recovery
 
-The funnel helps users understand how transactions move through the
-recovery pipeline.
-
-Recovery Funnel
-
-
-
 📈 Recovery Analytics
-
-The Analytics module provides a business-level and system-level view of
-recovery performance.
-
-Overall Performance
 
 Transaction count
 
@@ -455,68 +355,22 @@ Recovered revenue
 
 Average recovered amount per case
 
-Recovery Outcomes
+Recovery outcomes
 
-Recovered
+Failure reasons
 
-Pending
+Recovery strategy performance
 
-Not recovered
-
-Other outcomes
-
-Failure Reasons
-
-The analytics view helps identify major reasons behind failed or at-risk
-transactions.
-
-Strategy Performance
-
-Different recovery strategies can be compared to understand their
-performance.
-
-Model Metrics
-
-The analytics section provides visibility into machine learning model
-performance.
-
-Recovery Analytics
-
-
-
-🖥️ Application Overview
-
-Module               Purpose
-
-🏠 Command Center    Overall revenue recovery overview
-🤖 AI Recovery       AI-based transaction evaluation
-🛡️ Guardrails        Recovery safety rules and boundaries
-👤 Human Review      Human-in-the-loop decision making
-💳 Razorpay          Recovery payment execution
-✅ Verification      Payment result verification
-📋 Audit Trail       Recovery history and traceability
-📊 Recovery Funnel   End-to-end recovery journey
-📈 Analytics         Business and model performance
+Machine learning model metrics
 
 🏗️ System Architecture
-
-RevenueRescue AI follows a frontend → backend → AI/ML → payment
-integration architecture.
 
 ┌─────────────────────────────────────────────────────────┐
 │                     FRONTEND                            │
 │                                                         │
 │ React + Vite                                            │
-│                                                         │
-│ Dashboard                                               │
-│ AI Recovery                                             │
-│ Recovery Funnel                                         │
-│ Analytics                                               │
-│ Razorpay Execution                                      │
-│ Verification                                            │
-│ Human Review                                            │
-│ Audit Trail                                             │
-│ Guardrails                                              │
+│ Dashboard • AI Recovery • Funnel • Analytics            │
+│ Razorpay • Verification • Human Review • Audit • Guardrails
 └────────────────────────┬────────────────────────────────┘
                          │
                          │ REST API
@@ -524,20 +378,13 @@ integration architecture.
 ┌─────────────────────────────────────────────────────────┐
 │                      BACKEND                            │
 │                                                         │
-│ FastAPI                                                 │
-│                                                         │
-│ Recovery API                                            │
-│ AI Agent                                                │
-│ Decision Logic                                          │
-│ Failure Diagnosis                                       │
-│ Recovery Logic                                          │
-│ Audit Management                                        │
+│ FastAPI • AI Agent • Decision Logic • Diagnosis         │
+│ Recovery Logic • Audit Management                      │
 └───────────────┬──────────────────────┬──────────────────┘
                 │                      │
                 ▼                      ▼
 ┌────────────────────────┐   ┌────────────────────────────┐
 │    MACHINE LEARNING    │   │       DATA LAYER           │
-│                        │   │                            │
 │ Recovery Prediction    │   │ transactions.csv           │
 │ Model Evaluation       │   │ recovery_audit.csv        │
 │ Threshold Analysis     │   │                            │
@@ -547,16 +394,12 @@ integration architecture.
              ▼
 ┌─────────────────────────────────────────────────────────┐
 │                  RAZORPAY TEST MODE                     │
-│                                                         │
-│ Payment Links                                           │
-│ Payment Execution                                       │
-│ Payment Status                                          │
+│ Payment Links • Payment Execution • Payment Status      │
 └────────────────────────┬────────────────────────────────┘
                          │
                          ▼
                 ┌─────────────────────┐
                 │    VERIFICATION     │
-                │                     │
                 │ Payment Status      │
                 │ Amount Paid         │
                 │ Amount Recovered    │
@@ -567,87 +410,15 @@ integration architecture.
                 │     AUDIT TRAIL     │
                 └─────────────────────┘
 
-🧩 AI + Razorpay Architecture
-
-The system separates AI decision-making from payment execution.
-
-┌───────────────────┐
-│ Transaction Data  │
-└─────────┬─────────┘
-          │
-          ▼
-┌──────────────────────┐
-│ ML Prediction        │
-│ Recovery Probability │
-└─────────┬────────────┘
-          │
-          ▼
-┌───────────────────┐
-│ Failure Diagnosis │
-└─────────┬─────────┘
-          │
-          ▼
-┌───────────────────┐
-│ AI Decision Engine│
-└─────────┬─────────┘
-          │
-          ▼
-┌───────────────────┐
-│    Guardrails     │
-└─────────┬─────────┘
-          │
-     ┌────┴─────┐
-     │          │
-     ▼          ▼
-  Human       Approved
-  Review      Recovery
-                 │
-                 ▼
-          ┌──────────────┐
-          │   Razorpay   │
-          │  Test Mode   │
-          └──────┬───────┘
-                 │
-                 ▼
-          Payment Result
-                 │
-                 ▼
-          ┌──────────────┐
-          │ Verification │
-          └──────┬───────┘
-                 │
-                 ▼
-            Audit Trail
-
 📁 Project Structure
 
 RevenueRescue-AI/
 │
 ├── backend/
 │   ├── agents/
-│   │   ├── __init__.py
-│   │   ├── audit.py
-│   │   ├── decision.py
-│   │   ├── diagnosis.py
-│   │   └── recovery.py
-│   │
 │   ├── data/
-│   │   ├── recovery_audit.csv
-│   │   └── transactions.csv
-│   │
 │   ├── ml/
-│   │   ├── __init__.py
-│   │   ├── generate_data.py
-│   │   ├── predict.py
-│   │   ├── recovery_model.pkl
-│   │   ├── threshold_analysis.py
-│   │   └── train_model.py
-│   │
 │   ├── payments/
-│   │   ├── __init__.py
-│   │   ├── payment_link.py
-│   │   └── verification.py
-│   │
 │   ├── agent.py
 │   ├── api.py
 │   ├── batch_recovery.py
@@ -657,26 +428,6 @@ RevenueRescue-AI/
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── assets/
-│   │   ├── Analytics.css
-│   │   ├── AnalyticsView.jsx
-│   │   ├── App.css
-│   │   ├── App.jsx
-│   │   ├── Audit.css
-│   │   ├── AuditView.jsx
-│   │   ├── Dashboard.css
-│   │   ├── Dashboard.jsx
-│   │   ├── Guardrails.css
-│   │   ├── GuardrailsView.jsx
-│   │   ├── HumanReview.css
-│   │   ├── HumanReviewView.jsx
-│   │   ├── Payment.css
-│   │   ├── PaymentView.jsx
-│   │   ├── RecoveryFunnel.css
-│   │   ├── RecoveryFunnelView.jsx
-│   │   ├── VerificationView.css
-│   │   ├── VerificationView.jsx
-│   │   └── main.jsx
 │   ├── package.json
 │   └── vite.config.js
 │
@@ -697,55 +448,19 @@ RevenueRescue-AI/
 
 🧰 Technology Stack
 
-Frontend
+Frontend: React, JavaScript, HTML, CSS, Vite
 
-React
+Backend: Python, FastAPI, Pandas
 
-JavaScript
+Machine Learning: Python, Scikit-learn, recovery prediction,
+model evaluation, threshold analysis
 
-HTML
+Payment Integration: Razorpay Test Mode, Razorpay Payment Links
 
-CSS
-
-Vite
-
-Backend
-
-Python
-
-FastAPI
-
-Pandas
-
-Machine Learning
-
-Python
-
-Scikit-learn
-
-Recovery prediction
-
-Model evaluation
-
-Threshold analysis
-
-Payment Integration
-
-Razorpay Test Mode
-
-Razorpay Payment Links
-
-Data
-
-CSV-based transaction data
-
-Recovery audit data
-
-Trained machine learning model
+Data: CSV transaction data, recovery audit data, trained ML
+model
 
 🔗 Backend API
-
-The frontend communicates with the FastAPI backend through REST APIs.
 
 GET  /health
 GET  /
@@ -755,32 +470,9 @@ GET  /metrics
 GET  /transactions
 GET  /audit
 
-/recover
-
-Runs the recovery analysis and returns the AI recovery decision.
-
-/verify/{payment_link_id}
-
-Checks the Razorpay Payment Link and determines the payment/recovery
-status.
-
-/metrics
-
-Provides dashboard and recovery metrics.
-
-/transactions
-
-Returns transaction information.
-
-/audit
-
-Returns recovery audit records.
-
 🚀 Setup Instructions
 
 Prerequisites
-
-Install:
 
 Python 3.x
 
@@ -797,16 +489,8 @@ cd RevenueRescue-AI
 
 2. Setup Backend
 
-Create a Python virtual environment:
-
 python -m venv venv312
-
-Activate it:
-
 venv312\Scripts\activate
-
-Install the required packages:
-
 pip install fastapi uvicorn pandas scikit-learn razorpay python-dotenv
 
 3. Configure Environment Variables
@@ -822,19 +506,13 @@ Never commit .env to GitHub.
 
 4. Start the Backend
 
-From the project root:
-
 uvicorn backend.api:app --reload
 
 5. Setup Frontend
 
-Open another terminal:
-
 cd frontend
 npm install
 npm run dev
-
-Open the local URL provided by Vite.
 
 🔄 Complete Demo Flow
 
@@ -870,93 +548,16 @@ Open the local URL provided by Vite.
                     ↓
 16. Analyze Recovery Performance
 
-🧪 Successful and Unsuccessful Recovery
-
-RevenueRescue AI demonstrates both successful and unsuccessful recovery
-outcomes.
-
-Successful Recovery
-
-AI Decision
-    ↓
-Recovery Action
-    ↓
-Razorpay Payment
-    ↓
-Payment Captured
-    ↓
-Verification
-    ↓
-Recovered
-
-The recovered amount is recorded only after verification.
-
-Unsuccessful / Incomplete Recovery
-
-AI Decision
-    ↓
-Recovery Action
-    ↓
-Razorpay Payment Attempt
-    ↓
-Payment Not Completed
-    ↓
-Verification
-    ↓
-Not Recovered / Pending
-    ↓
-Recovered Amount = ₹0
-
-The unsuccessful or incomplete attempt can still be recorded in the
-audit trail.
-
-📌 Important Design Principle
-
-RevenueRescue AI separates decision, execution, and
-verification.
-
-Decision
-   ↓
-Execution
-   ↓
-Payment
-   ↓
-Verification
-   ↓
-Recovery
-
-Therefore:
-
-Recovery Link Created
-        ≠
-Revenue Recovered
-
-A recovery is counted only after the payment result has been verified.
-
 🔐 Security
 
 Sensitive credentials are intentionally excluded from the repository.
-
-The .gitignore file excludes:
-
-.env
-.env.*
-venv/
-venv312/
-node_modules/
-dist/
-__pycache__/
-*.pyc
+The .gitignore excludes .env, virtual environments, Node
+dependencies, build files, and Python cache files.
 
 Razorpay credentials should always be stored using environment
 variables.
 
-Never place real API credentials directly inside source code or README
-files.
-
 🔮 Future Improvements
-
-Potential future improvements include:
 
 Real-time Razorpay webhooks
 
@@ -974,8 +575,6 @@ A/B testing of recovery strategies
 
 Advanced fraud and risk detection
 
-Real-time recovery monitoring
-
 Production database integration
 
 Role-based access control
@@ -983,31 +582,3 @@ Role-based access control
 Advanced model monitoring
 
 Continuous model improvement
-
-
-
-🎯 Project Summary
-
-RevenueRescue AI brings together:
-
-AI Decision Making
-        +
-Machine Learning
-        +
-Razorpay Integration
-        +
-Guardrails
-        +
-Human Review
-        +
-Payment Verification
-        +
-Auditability
-        +
-Analytics
-
-The complete recovery lifecycle is:
-
-Detect → Predict → Diagnose → Decide → Guard → Recover → Verify →
-Audit → Analyze
-
