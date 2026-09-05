@@ -1,0 +1,40 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+venv312/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies
+node_modules/
+frontend/node_modules/
+
+# Frontend build
+frontend/dist/
+frontend/build/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Private keys
+*.pem
+*.key
