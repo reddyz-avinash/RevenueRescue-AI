@@ -283,38 +283,54 @@ The goal is to move beyond individual transactions and understand overall recove
 
 Application Screenshots
 Revenue Recovery Command Center
+![Dashboard](./docs/screenshots/dashboard.png.png)
+
 
 The main dashboard provides an overview of revenue recovery activity and key metrics.
 
 AI Recovery
+![AI Recovery](./docs/screenshots/ai-recovery.png.png)
+
 
 The AI Recovery page shows the AI-driven recovery decision process.
 
 Recovery Analytics
+![Analytics](./docs/screenshots/analytics.png.png)
+
 
 The Analytics page provides a broader view of recovery performance.
 
 Recovery Funnel
+![Recovery Funnel](./docs/screenshots/recovery-funnel.png.png)
 
 The Recovery Funnel visualizes the movement from revenue risk to verified recovery.
 
 Razorpay Execution
+![Razorpay](./docs/screenshots/razorpay.png.png)
+
 
 The Razorpay page demonstrates the payment execution stage.
 
 Payment Verification
+![Verification](./docs/screenshots/verification.png.png)
+
 
 The Verification page confirms whether the payment was actually recovered.
 
 Human Review
+![Human Review](./docs/screenshots/human-review.png.png)
+
 
 The Human Review page provides a controlled workflow for cases requiring human judgement.
 
 Audit Trail
+![Audit Trail](./docs/screenshots/audit-trail.png.png)
+
 
 The Audit Trail records recovery attempts and their outcomes.
 
 Guardrails
+![Guardrails](./docs/screenshots/guardrails.png.png)
 
 The Guardrails page demonstrates the controls applied around automated recovery decisions.
 
