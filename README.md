@@ -74,7 +74,7 @@ Payment Verification
 Recovered Revenue
       |
       v
-Audit Trail + Analytics
+Audit Trail + Analytics ```
 
 1. Revenue Risk Detection
 
