@@ -379,40 +379,31 @@ RevenueRescue AI is organized into several layers.
 The recovery agent follows a structured decision process.
 
 ### Step 1 — Detect
-
-Identify a transaction that may represent revenue at risk.
+- Identify a transaction that may represent revenue at risk.
 
 ### Step 2 — Predict
-
-Estimate the probability of successful recovery.
+- Estimate the probability of successful recovery.
 
 ### Step 3 — Diagnose
-
-Determine the likely reason for the payment failure.
+- Determine the likely reason for the payment failure.
 
 ### Step 4 — Decide
-
-Select an appropriate recovery action.
+- Select an appropriate recovery action.
 
 ### Step 5 — Apply Guardrails
-
-Check whether the proposed action is allowed.
+- Check whether the proposed action is allowed.
 
 ### Step 6 — Execute
-
-Execute the payment recovery action through Razorpay Test Mode.
+- Execute the payment recovery action through Razorpay Test Mode.
 
 ### Step 7 — Verify
-
-Check the actual Razorpay payment result.
+- Check the actual Razorpay payment result.
 
 ### Step 8 — Measure
-
-Calculate the verified recovered amount.
+- Calculate the verified recovered amount.
 
 ### Step 9 — Audit
-
-Record the decision and final outcome.
+- Record the decision and final outcome.
 
 ---
 
@@ -559,50 +550,37 @@ Open the URL shown by Vite in the terminal.
 A typical demonstration of RevenueRescue AI can follow this sequence:
 
 ### 1. Open the Dashboard
-
-Start with the Revenue Recovery Command Center.
-
-Show the overall revenue recovery metrics.
+- Start with the Revenue Recovery Command Center.
+- Show the overall revenue recovery metrics.
 
 ### 2. Open AI Recovery
-
-Select a revenue-at-risk case.
-
-Show the AI's recovery probability and diagnosis.
+- Select a revenue-at-risk case.
+- Show the AI's recovery probability and diagnosis.
 
 ### 3. Show the Recovery Decision
-
-Explain why the AI selected the proposed recovery action.
+- Explain why the AI selected the proposed recovery action.
 
 ### 4. Show Guardrails
-
-Demonstrate that the AI decision is bounded by predefined rules.
+- Demonstrate that the AI decision is bounded by predefined rules.
 
 ### 5. Execute Through Razorpay
-
-Trigger the Test Mode payment recovery flow.
+- Trigger the Test Mode payment recovery flow.
 
 ### 6. Complete the Payment
-
-Use the Razorpay Test Mode payment experience.
+- Use the Razorpay Test Mode payment experience.
 
 ### 7. Verify the Payment
-
-Return to the Verification page.
-
-Show that the payment status is checked using Razorpay information.
+- Return to the Verification page.
+- Show that the payment status is checked using Razorpay information.
 
 ### 8. Show the Recovered Amount
-
-Only the verified successful amount is counted as recovered revenue.
+- Only the verified successful amount is counted as recovered revenue.
 
 ### 9. Open the Audit Trail
-
-Show that the recovery attempt has been recorded.
+- Show that the recovery attempt has been recorded.
 
 ### 10. Show Analytics
-
-Finish by showing the overall recovery funnel and performance.
+- Finish by showing the overall recovery funnel and performance.
 
 ---
 
@@ -611,24 +589,19 @@ Finish by showing the overall recovery funnel and performance.
 RevenueRescue AI is built around five principles.
 
 ### 1. Revenue First
-
-Focus on recovering revenue that is genuinely at risk.
+- Focus on recovering revenue that is genuinely at risk.
 
 ### 2. AI-Assisted Decisions
-
-Use AI to prioritize and recommend recovery actions.
+- Use AI to prioritize and recommend recovery actions.
 
 ### 3. Bounded Automation
-
-AI actions operate within predefined guardrails.
+- AI actions operate within predefined guardrails.
 
 ### 4. Verified Outcomes
-
-Do not count an action as successful until the payment result is verified.
+- Do not count an action as successful until the payment result is verified.
 
 ### 5. Full Auditability
-
-Maintain a record of decisions, attempts, and outcomes.
+- Maintain a record of decisions, attempts, and outcomes.
 
 Why This Approach Matters
 
